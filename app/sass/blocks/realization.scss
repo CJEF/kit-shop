@@ -27,7 +27,8 @@
             padding-left: 96px;
         }
         &:nth-child(4) &__inner--flex {
-            padding: 60px 0 75px 100px;
+            padding: 60px 0 500px 100px;
+            margin-top: 40px;
         }
         &:nth-child(5) &__inner {
             padding: 60px 0 50px;
@@ -93,13 +94,77 @@
             box-shadow: 0 10px 50px rgba(0, 0, 0, .55);
         }
         &__column {
-            // display: flex;
+            width: 33.3%;
         }
+        &__text-block {
+            position: absolute;
+            padding: 20px 20px 25px;
+            background-color: $bg-gray;
+            max-width: 370px;
+            color: $black;
+            font-size: 10px;
+            line-height: 14px;
+            bottom: -25px;
+            right: -25px;
+            box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+        }
+        &__img--bottom {
+            margin-top: auto;
+            display: inline-block;
+        }
+        &__img-block {
+            min-width: 370px;
+            min-height: 391px;
+            background-color: #fff;
+            position: relative;
+            padding: 30px 12px 0;
+        }
+        &__mockup {
+
+        }
+        &__bitrix24 {
+
+        }
+        &__img--visible {
+            min-width: 970px;
+            position: absolute;
+            margin: 0 0 0 -100px;
+            box-shadow: 0 10px 50px rgba(0, 0, 0, .55);
+            top: 215px;
+        }
+        &__block {
+            position: relative;
+        }
+    }
+    &-img__block--bottom {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__item-text--bold {
         text-align: center;
         margin: 45px 0 75px;
         padding-left: 80px;
+    }
+
+    &-column {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin: 0 15px;
+        &__block {
+            padding-left: 100px;
+            margin-bottom: 20px;
+        }
+        &__span {
+            font-weight: bold;
+            font-size: 34px;
+            line-height: 20px;
+            color: $blue;
+            display: inline-block;
+            margin: 0 10px 10px 0;
+        }
     }
 }
 
@@ -109,4 +174,20 @@
 .swiper-container {
   width: 475px;
   height: 270px;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: -35px;
+    overflow: visible;
+    z-index: 99999;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #dd3123;
+    background: none;
+    transform: rotate(45deg);
 }

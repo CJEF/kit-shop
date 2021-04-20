@@ -92,6 +92,14 @@ h3.title {
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
+    &--small {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 500;
+    }
+    &--small + .text--small {
+        margin-top: 20px !important;
+    }
 }
 
 .text--extraBold {
@@ -114,7 +122,7 @@ h3.title {
     margin: 0 auto;
     display: flex;
     &--big {
-        max-width: 1175px;
+        max-width: 1200px;
     }
 }
 
@@ -122,6 +130,7 @@ h3.title {
     background-color: $red;
     color: #fff;
     padding: 10px 23px;
+    min-width: 170px;
     font-weight: bold;
     font-size: 12px;
     line-height: 22px;
