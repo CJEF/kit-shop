@@ -15,24 +15,10 @@
     &__item {
         display: flex;
         justify-content: space-between;
-        position: relative;
-        &:before {
-            content: '';
-            top: -10px;
-            left: -2.5px;
-            transform: rotate(45deg);
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
 
-            border-right:15px solid $red;
-
-        }
         &:nth-child(2n) {
             flex-direction: row-reverse;
-            &::before {
+            .tasks__content::before {
                 left: auto;
                 right: -2px;
                 transform: rotate(135deg);
@@ -46,6 +32,21 @@
         width: 570px;
         padding: 45px 30px;
         background-color: #fff;
+        &:before {
+            content: '';
+            z-index: 1;
+            top: -10px;
+            left: -2.5px;
+            transform: rotate(45deg);
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+
+            border-right:15px solid $red;
+
+        }
     }
     &__icon {
         background-color: $blue;
