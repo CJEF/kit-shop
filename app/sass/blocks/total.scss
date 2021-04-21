@@ -110,20 +110,8 @@
     opacity: 1;
     z-index: inherit;
     &:hover {
-        .total-video__link svg path{
+        .total-video__link svg .path{
             fill: $red;
-            stroke: $red;
-            opacity: 1;
-        }
-        .total-video__link svg mask path{
-            fill: $red;
-            stroke: $red;
-            opacity: 1;
-        }
-        .total-video__link svg mask{
-            fill: $red;
-            stroke: $red;
-            opacity: 1;
         }
     }
 }

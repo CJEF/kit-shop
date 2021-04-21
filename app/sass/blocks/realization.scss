@@ -47,7 +47,7 @@
                 content: "0" counter(realization);
                 counter-increment: realization;                 /* Инкрементирует счётчик*/
                 position: absolute;
-                top: -15px;
+                top: 8px;
                 left: -100px;
                 font-weight: 800;
                 font-size: 52px;
@@ -221,4 +221,8 @@
 
 .swiper-slide img {
     min-width: 100%;
+}
+
+.title--first::before {
+    top: -15px;
 }
