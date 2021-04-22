@@ -2,6 +2,9 @@ const swiper = new Swiper(".swiper-container", {
   // Optional parameters
   loop: true,
   slidesPerView: 1,
+  autoplay: {
+    delay: 3000
+  },
 
   // If we need pagination
   pagination: {
@@ -109,10 +112,12 @@ function createIframe(v, id) {
         "?list=PLwmxig-4_P7iijSsMEUTewYYlfQGg2Bd1&autoplay=1&color=white&autohide=2&modestbranding=1&border=0&wmode=opaque&enablejsapi=1&showinfo=0&rel=0"
     );
     iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "");
+    iframe.setAttribute("autoplay", "");
     iframe.setAttribute("class", "video-iframe");
     v.firstChild.replaceWith(iframe);
 }
-
+/* <iframe width="1280" height="720" src="https://www.youtube.com/embed/D70X0cCBcMY?list=PLwmxig-4_P7iijSsMEUTewYYlfQGg2Bd1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
 /** Pause video on modal close **/
 // $("#video-modal").on("hidden.bs.modal", function (e) {
 //     $(this).find("iframe").remove();
@@ -122,5 +127,7 @@ function createIframe(v, id) {
 // $("#video-modal").on("show.bs.modal", function (e) {
 //     getVideos();
 // });
+
+// AOS
 
 AOS.init();
