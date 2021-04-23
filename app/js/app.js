@@ -16,22 +16,6 @@ const swiper = new Swiper(".swiper-container", {
   paginationClickable: true,
 });
 
-const swiper = new Swiper(".swiper-container", {
-  // Optional parameters
-  loop: true,
-  slidesPerView: 1,
-  autoplay: {
-    delay: 3000
-  },
-
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  paginationClickable: true,
-});
-
 // AOS
 
 AOS.init();
